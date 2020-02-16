@@ -1,5 +1,7 @@
 # Deployment Instructions
 
+0. Clone this repo with e.g. `git clone git@github.com:acfabro/assignment2-deployment.git assignment` and open the new directory. 
+
 1. Import `database/database.sql` to your MySQL database.
 
 2. Open `deploy.sh` and edit your database settings.
