@@ -4,7 +4,7 @@
 
 1. Import `database/database.sql` to your MySQL database.
 
-2. Open `deploy.sh` and edit your database settings.
+2. Open `deploy.sh` and edit your database settings. I.e. your database's IP address, database name, and credentials.
 
 ```
 export DB_HOST=127.0.0.1
