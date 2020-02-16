@@ -21,3 +21,11 @@ Note: DB_HOST=127.0.0.1 may not work. Set this to an IP other than localhost.
 4. If there were no errors run `docker-compose up`.
 
 5. Open [http://localhost:9800](http://localhost:9800) on your browser.
+
+## Install on your own web server
+
+If you want to install on your own web server and configure the application yourself:
+
+1. Open api/.env and edit your database, redis settings.
+
+2. Open web/config.js and edit API_URL
