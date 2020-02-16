@@ -1,0 +1,29 @@
+web:
+  image: nginx:latest
+  ports:
+    - "9800:81"
+  volumes:
+    - ./web:/var/www/html
+    - ./site-web.conf:/etc/nginx/conf.d/site.conf
+
+redis:
+  image: redis:latest
+
+php:
+  build: ./api
+  volumes:
+    - ./api:/var/www/html
+  links:
+    - redis
+
+api:
+  image: nginx:latest
+  ports:
+    - "9801:81"
+  volumes:
+    - ./api:/var/www/html
+    - ./site-api.conf:/etc/nginx/conf.d/site.conf
+  links:
+    - php
+    - redis
+
