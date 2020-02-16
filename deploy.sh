@@ -8,12 +8,12 @@ export API_URL=http:\\/\\/127.0.0.1:9801
 
 # env config
 export DB_HOST=127.0.0.1
-export DB_PORT=33060
-export DB_NAME=mailerlite
+export DB_PORT=3306
+export DB_NAME=database
 export DB_USERNAME=homestead
 export DB_PASSWORD=secret
 export USE_CACHE=true
-export REDIS_STRING=127.0.0.1
+export REDIS_STRING=redis
 export REDIS_PORT=6379
 
 # tools - composer
