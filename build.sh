@@ -17,20 +17,21 @@ export REDIS_PORT=6379
 # build api, install dependencies and
 cd api || exit
 cp .env.example .env
-sed -i .bak "s/^DB_HOST=.*/DB_HOST=$DB_HOST/" .env
-sed -i .bak "s/^DB_NAME=.*/DB_NAME=$DB_NAME/" .env
-sed -i .bak "s/^DB_PORT=.*/DB_PORT=$DB_PORT/" .env
-sed -i .bak "s/^DB_USERNAME=.*/DB_USERNAME=$DB_USERNAME/" .env
-sed -i .bak "s/^DB_PASSWORD=.*/DB_PASSWORD=$DB_PASSWORD/" .env
-sed -i .bak "s/^USE_CACHE=.*/USE_CACHE=$USE_CACHE/" .env
-sed -i .bak "s/^REDIS_STRING=.*/REDIS_STRING=$REDIS_STRING/" .env
-sed -i .bak "s/^REDIS_PORT=.*/REDIS_PORT=$REDIS_PORT/" .env
+sed -i.bak "s/^DB_HOST=.*/DB_HOST=$DB_HOST/" .env
+sed -i.bak "s/^DB_NAME=.*/DB_NAME=$DB_NAME/" .env
+sed -i.bak "s/^DB_PORT=.*/DB_PORT=$DB_PORT/" .env
+sed -i.bak "s/^DB_USERNAME=.*/DB_USERNAME=$DB_USERNAME/" .env
+sed -i.bak "s/^DB_PASSWORD=.*/DB_PASSWORD=$DB_PASSWORD/" .env
+sed -i.bak "s/^USE_CACHE=.*/USE_CACHE=$USE_CACHE/" .env
+sed -i.bak "s/^REDIS_STRING=.*/REDIS_STRING=$REDIS_STRING/" .env
+sed -i.bak "s/^REDIS_PORT=.*/REDIS_PORT=$REDIS_PORT/" .env
 php ../bin/composer.phar install
 
 # build web
 cd ../web || exit
 npm install
-sed -i .bak "s/^API_URL=.*/API_URL=$API_URL/" .env
+sed -i.bak 's/^API_URL=.*/API_URL=$API_URL/' .env
+sed -i.bak 's/".*"/"http:\/\/18.139.108.131:9801"/' src/config.js
 npm run build
 
 # copy built items to server, so you can run web from 9801
