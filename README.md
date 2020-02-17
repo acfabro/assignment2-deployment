@@ -31,7 +31,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 2. If using your own database, open `deploy.sh` and edit your database settings. I.e. your database's IP address, database name, and credentials.
 
 ```
-export DB_HOST=127.0.0.1
+export DB_HOST=db
 export DB_PORT=3306
 export DB_NAME=database
 export DB_USERNAME=homestead
@@ -44,13 +44,15 @@ Note: DB_HOST=127.0.0.1 may not work. Set this to an IP other than localhost.
 
 4. If not installing on local machine, change the API address by editing `web/.env` and `web/config.env`.
 
-5. If there were no errors run `docker-compose up`.
+5. Run `sh build.sh` to build  your environment.
 
-6. Open [http://localhost:9800](http://localhost:9800) on your browser for the web.
+6. If there were no errors run `docker-compose up`.
 
-7. API is at [http://localhost:9801](http://localhost:9801). Test using postman with the collection at `api/api.postman_collection.json`.
+7. Services should be ready to use. 
 
-8. Open DB adminer at [http://localhost:9802](http://localhost:9802) on your browser for the web.
+* Open [http://localhost:9800](http://localhost:9800) on your browser for the web.
+* API is at [http://localhost:9801](http://localhost:9801). Test using postman with the collection at `api/api.postman_collection.json`.
+* Open DB adminer at [http://localhost:9802](http://localhost:9802) on your browser for the web.
 
 ## Install on your own web server
 
