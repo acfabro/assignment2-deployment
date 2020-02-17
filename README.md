@@ -28,7 +28,9 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 1. Import `database/database.sql` to your MySQL database.
 
-2. If using your own database, open `deploy.sh` and edit your database settings. I.e. your database's IP address, database name, and credentials.
+2. Run `sh deploy.sh` to download all code. You may have to check the output and watch for errors.
+
+3. If using your own database, open `build.sh` and edit your database settings. I.e. your database's IP address, database name, and credentials.
 
 ```
 export DB_HOST=db
@@ -40,9 +42,7 @@ export DB_PASSWORD=secret
 
 Note: DB_HOST=127.0.0.1 may not work. Set this to an IP other than localhost.
 
-3. Run `sh deploy.sh` to download all code. You may have to check the output and watch for errors.
-
-4. If not installing on local machine, change the API address by editing `web/.env` and `web/config.env`.
+4. If not installing on your local machine, change the API address by editing `web/.env` and `web/config.env`.
 
 5. Run `sh build.sh` to build  your environment.
 
