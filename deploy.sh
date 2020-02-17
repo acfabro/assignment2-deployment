@@ -7,7 +7,7 @@ export WEB_PORT=9800
 export API_URL=http:\\/\\/127.0.0.1:9801
 
 # env config
-export DB_HOST=127.0.0.1
+export DB_HOST=db
 export DB_PORT=3306
 export DB_NAME=database
 export DB_USERNAME=homestead
