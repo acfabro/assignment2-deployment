@@ -1,10 +1,28 @@
 # Deployment Instructions
 
+## Requirements
+
+1. PHP 7 - tested on PHP 7.3. Required packages
+```
+php
+php-json
+php-xml
+php-common
+php-mbstring
+php-cli
+```
+
+2. npm
+
+3. docker
+
+## Steps
+
 0. Clone this repo with e.g. `git clone git@github.com:acfabro/assignment2-deployment.git assignment` and open the new directory. 
 
 1. Import `database/database.sql` to your MySQL database.
 
-2. Open `deploy.sh` and edit your database settings. I.e. your database's IP address, database name, and credentials.
+2. If using your own database, open `deploy.sh` and edit your database settings. I.e. your database's IP address, database name, and credentials.
 
 ```
 export DB_HOST=127.0.0.1
