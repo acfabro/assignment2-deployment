@@ -26,8 +26,8 @@ mv composer.phar bin/
 chmod +x bin/composer.phar
 
 # git pull
-git clone git@github.com:acfabro/assignment2.git api
-git clone git@github.com:acfabro/assignment2-html.git web
+git clone https://github.com/acfabro/assignment2.git api
+git clone https://github.com/acfabro/assignment2-html.git web
 
 # build api, install dependencies and
 cd api || exit
