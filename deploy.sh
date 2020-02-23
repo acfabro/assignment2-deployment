@@ -1,8 +1,6 @@
 #!/bin/sh
 
-set -x
 set -e
-
 
 # tools - composer
 mkdir bin
