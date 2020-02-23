@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 # config
 # export WEB_PORT=9800
 export API_URL=http:\\/\\/127.0.0.1:9801
@@ -40,3 +42,11 @@ cp -rv ./web/build/* ./api/public
 
 # done
 echo "run: 'docker-compose up' to build your containers"
+
+
+# for errors
+
+# keep track of the last executed command
+trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
+# echo an error message before exiting
+trap 'echo "\"${last_command}\" command filed with exit code $?."' EXIT
